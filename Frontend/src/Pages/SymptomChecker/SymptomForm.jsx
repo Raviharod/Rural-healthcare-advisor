@@ -1,6 +1,7 @@
 import PatientInfo from "./PatientInfo";
 import SymptomInput from "./SymptomInput";
 import AdditionalQue from "./AdditionalQue";
+import { Link } from "react-router-dom";
 function SymptomForm() {
   return (
     <>
@@ -22,6 +23,15 @@ function SymptomForm() {
 
           {/* additional questions */}
           <AdditionalQue></AdditionalQue>
+
+          <div className="w-full flex justify-center items-center my-10">
+            <button
+              type="submit"
+              className="p-3 bg-green-400 rounded text-center"
+            >
+              <Link to="/symptomsResult">Check Symptoms</Link>
+            </button>
+          </div>
         </form>
       </div>
     </>

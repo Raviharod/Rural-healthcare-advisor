@@ -6,6 +6,7 @@ import App from './App.jsx'
 import Login from './Pages/Login/Login.jsx'
 import Home from './Pages/Home/Home.jsx'
 import SymptomForm from './Pages/SymptomChecker/SymptomForm.jsx'
+import SymptomsResult from './Pages/SymptomsResult/SymptomsResult.jsx'
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,14 @@ const router = createBrowserRouter([
         element: <SymptomForm/>
       }
     ]
+  },
+  {
+    path:"/symptomsResult",
+    element:<App/>,
+    children:[{
+      path:"/symptomsResult",
+      element:<SymptomsResult/>
+    }]
   }
 ])
 
